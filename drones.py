@@ -10,7 +10,6 @@ stations.insert(0, (sx, sy))
 ex, ey = map(int, input().split())
 stations.append((ex, ey))
 path = False
-print(stations)
 
 edge = {}
 for i in range(len(stations)):
@@ -18,14 +17,12 @@ for i in range(len(stations)):
         if i == j:
             continue
         distance = math.sqrt(((stations[i][0] - stations[j][0]) ** 2) + (stations[i][1] - stations[j][1]) ** 2)
-        print(i,j,distance)
         if distance <= D:
             if i not in edge:
                 edge[i] = [j]
             else:
                 edge[i] += [j]
 
-print(edge)
 
 q = []
 visited = {}
